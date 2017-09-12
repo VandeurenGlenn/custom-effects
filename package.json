@@ -1,6 +1,6 @@
 {
   "name": "custom-effects",
-  "version": "0.9.0-experimental",
+  "version": "0.9.0-experimental.1",
   "main": "custom-effects.js",
   "module": "src/custom-effects.js",
   "repository": "https://github.com/vandeurenglenn/custom-effects",
