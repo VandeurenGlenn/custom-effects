@@ -2,8 +2,19 @@
   "name": "custom-effects",
   "version": "0.9.0-experimental",
   "main": "custom-effects.js",
+  "module": "src/custom-effects.js",
   "repository": "https://github.com/vandeurenglenn/custom-effects",
   "author": "Glenn Vandeuren",
   "license": "MIT",
-  "flat": true
+  "flat": true,
+  "backed": {
+    "bundles": [
+      {
+        "src": "src/custom-effects.js",
+        "dest": "custom-effects.js",
+        "format": "iife",
+        "moduleName": "customEffects"
+      }
+    ]
+  }
 }
