@@ -1,8 +1,15 @@
 export default base => class CustomEffects extends base {
-  constructor(options = {effects: []}) {
-    super(options);
-    if (options && options.effects) {
-      for (const effect of options.effects) {
+  get effects() {
+    return customElements.get(this.localName).effects;
+  }
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    if (super.connectedCallback) super.connectedCallback();
+    if (this.effects) {
+      for (const effect of this.effects) {
         this._initEffect(effect);
       }
     }

@@ -2,10 +2,11 @@ var customEffects = (function () {
 'use strict';
 
 var customEffects = (base => class CustomEffects extends base {
-  constructor(options = { effects: [] }) {
-    super(options);
-    if (options && options.effects) {
-      for (const effect of options.effects) {
+  constructor() {
+    super();
+    const effects = customElements.get(this.localName).effects;
+    if (effects) {
+      for (const effect of effects) {
         this._initEffect(effect);
       }
     }
